@@ -168,7 +168,7 @@ p {
     position: relative;
     text-align: center;
     color: white;
-    margin-top: -70px; /* Adjust this value based on the height of your navbar */
+    margin-top: -70px; /* Adjust this value based on the height of thee navbar */
     z-index: 1; /* Ensure the hero image is behind the navbar */
 }
 
