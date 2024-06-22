@@ -1,8 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.navbar-toggler');
-    const navMenu = document.querySelector('#page5-nav ul');
+document.addEventListener("DOMContentLoaded", function() {
+    var dropdown = document.querySelector("#page6-nav .dropdown");
+    var dropdownMenu = document.querySelector(".dropdown-menu");
 
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
+    dropdown.addEventListener("mouseenter", function() {
+        dropdownMenu.style.display = "block";
+    });
+
+    dropdown.addEventListener("mouseleave", function() {
+        dropdownMenu.style.display = "none";
     });
 });
