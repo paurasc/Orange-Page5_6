@@ -113,16 +113,18 @@ p {
     display: none;
     position: absolute;
     background-color: var(--color-dark-blue);
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     top: 100%;
-    left: -1000%;
-    width: 100vw;
+    left: 100%;
+    transform: translateX(-60%);
+    width: 200vw; /* Adjust width as needed */
+    max-width: 1500px; /* Set a maximum width */
     z-index: 1;
     display: flex;
+    height: 500px;
     justify-content: space-between;
 }
-
 .dropdown:hover .dropdown-menu {
     display: flex;
     background-color: var(--color-white);
@@ -153,12 +155,22 @@ p {
 
 .dropdown-column ul li a {
     color: var(--color-dark-gray);
-    background-color: var(--color-dark-blue);
+    
     
 }
 
 .dropdown-column ul li a:hover {
     text-decoration: underline;
+}
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px; /* Adjust the gap between columns as needed */
+}
+
+.dropdown-column {
+    flex: 1;
+    padding: 10px; /* Adjust the padding as needed */
 }
 
 /* Main */
