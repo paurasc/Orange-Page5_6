@@ -116,7 +116,7 @@ p {
     padding: 20px;
     border-radius: 5px;
     top: 100%;
-    left: 0;
+    left: -1000%;
     width: 100vw;
     z-index: 1;
     display: flex;
@@ -125,15 +125,19 @@ p {
 
 .dropdown:hover .dropdown-menu {
     display: flex;
+    background-color: var(--color-white);
 }
 
 .dropdown-column {
+    color: var(--color-dark-gray);
+    
     flex: 1;
     margin-right: 20px;
+    
 }
 
 .dropdown-column h5 {
-    color: var(--color-light-blue);
+    color: var(--color-dark-gray);
     margin-top: 0;
 }
 
@@ -148,8 +152,9 @@ p {
 }
 
 .dropdown-column ul li a {
-    color: var(--color-light-blue);
-    text-decoration: none;
+    color: var(--color-dark-gray);
+    background-color: var(--color-dark-blue);
+    
 }
 
 .dropdown-column ul li a:hover {
