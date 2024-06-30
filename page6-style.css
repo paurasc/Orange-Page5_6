@@ -442,3 +442,27 @@ p {
         margin-bottom: 10px;
     }
 }
+@font-face {
+    font-family: 'OpenSans';
+    src: url('Fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'OpenSans Semibold';
+    src: url('Fonts/open-sans/OpenSans-Semibold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni Moda';
+    src: url('Fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni Moda Italic';
+    src: url('Fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Snowburst One';
+    src: url('Fonts/Snowburst_One/SnowburstOne-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Henny-penny';
+    src: url('Fonts/Henny-Penny/HennyPenny-Regular.ttf') format('truetype');
+  }
