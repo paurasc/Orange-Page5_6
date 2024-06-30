@@ -18,7 +18,7 @@ body {
 }
 
 h1, h2 {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Bodoni Moda', 'open-sans';
 }
 
 h1 {
@@ -34,6 +34,7 @@ h2 {
 p {
     font-size: 1em;
     line-height: 1.5;
+    
 }
 
 /* Header */
@@ -45,6 +46,7 @@ p {
     position: sticky;
     top: 0;
     width: 100%;
+    font-weight: bold
 }
 
 #page6-logo {
@@ -112,19 +114,20 @@ p {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-white);
     padding: 10px;
     border-radius: 5px;
     top: 100%;
     left: 100%;
     transform: translateX(-60%);
     width: 200vw; /* Adjust width as needed */
-    max-width: 1500px; /* Set a maximum width */
+    max-width: 1600px; /* Set a maximum width */
     z-index: 1;
     display: flex;
-    height: 500px;
+    height: 400px;
     justify-content: space-between;
 }
+
 .dropdown:hover .dropdown-menu {
     display: flex;
     background-color: var(--color-white);
@@ -165,9 +168,26 @@ p {
 .dropdown-container {
     display: flex;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0px; /* Adjust the gap between columns as needed */
 }
-
+.location-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.location-list li {
+    margin-bottom: 10px;
+}
+.location-link {
+    color: #03B1F4;
+    font-weight: bold;
+    text-decoration: none;
+}
+.dropdown-column h5 {
+    margin-top: 0;
+}
 .dropdown-column {
     flex: 1;
     padding: 10px; /* Adjust the padding as needed */
