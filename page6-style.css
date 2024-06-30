@@ -121,8 +121,8 @@ p {
     position: relative;
     text-align: center;
     color: white;
-    margin-top: -70px; /* Adjust this value based on the height of your navbar */
-    z-index: 1; /* Ensure the hero image is behind the navbar */
+    margin-top: -70px; 
+    z-index: 1; 
 }
 
 .hero-image img {
@@ -147,8 +147,8 @@ p {
     top: 100%;
     left: 100%;
     transform: translateX(-60%);
-    width: 200vw; /* Adjust width as needed */
-    max-width: 1600px; /* Set a maximum width */
+    width: 200vw; 
+    max-width: 1600px; 
     z-index: 1;
     display: flex;
     height: 400px;
@@ -195,12 +195,12 @@ p {
 .dropdown-container {
     display: flex;
     justify-content: space-between;
-    gap: 0px; /* Adjust the gap between columns as needed */
+    gap: 0px; 
 }
 
 .dropdown-column {
     flex: 1;
-    padding: 10px; /* Adjust the padding as needed */
+    padding: 10px; 
 }
 
 

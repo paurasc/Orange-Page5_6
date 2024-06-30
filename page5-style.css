@@ -42,7 +42,7 @@ p {
     background-color: var(--color-dark-blue);
     padding: 10px 0;
     opacity: 0.9;
-    z-index: 10; /* Ensure the navbar is above the hero image */
+    z-index: 10; /* navbar is above the hero image */
     position: sticky;
     top: 0;
     width: 100%;
@@ -120,11 +120,11 @@ p {
     top: 100%;
     left: 100%;
     transform: translateX(-60%);
-    width: 200vw; /* Adjust width as needed */
-    max-width: 1600px; /* Set a maximum width */
+    width: 200vw; 
+    max-width: 1600px; 
     z-index: 1;
     display: flex;
-    height: 400px;
+    height: 450px;
     justify-content: space-between;
 }
 
@@ -170,7 +170,7 @@ p {
     justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0px; /* Adjust the gap between columns as needed */
+    gap: 0px; 
 }
 .location-list {
     list-style-type: none;
@@ -190,7 +190,7 @@ p {
 }
 .dropdown-column {
     flex: 1;
-    padding: 10px; /* Adjust the padding as needed */
+    padding: 10px; 
 }
 
 /* Main */
@@ -205,8 +205,8 @@ p {
     position: relative;
     text-align: center;
     color: white;
-    margin-top: -70px; /* Adjust this value based on the height of thee navbar */
-    z-index: 1; /* Ensure the hero image is behind the navbar */
+    margin-top: -70px; /* value based on the height of thee navbar */
+    z-index: 1; /* To Ensure hero image is behind the navbar */
 }
 
 .hero-image img {
