@@ -1,47 +1,96 @@
+/* Index page*/
+/*Fonts*/
+@font-face {
+    font-family: 'OpenSans';
+    src: url('Fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'OpenSans Semibold';
+    src: url('Fonts/open-sans/OpenSans-Semibold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni Moda';
+    src: url('Fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Bodoni Moda Italic';
+    src: url('Fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Snowburst One';
+    src: url('Fonts/Snowburst_One/SnowburstOne-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Henny-penny';
+    src: url('Fonts/Henny-Penny/HennyPenny-Regular.ttf') format('truetype');
+  }
+/*Header Section*/
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.navbar {
+#index-header {
+    background-color:rgba(26,46,56,0.9) ;
+    position:sticky;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
+    padding:0 16px;
+}
+ #index-nav{
+    display: flex; /* Change to flexbox layout */
     align-items: center;
-    padding: 10px 20px;
-    background-color: #005bab;
-}
+ }
 
-.logo {
-    height: 50px;
-}
-
-nav ul {
+ #index-nav ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+     margin: 0;
+     padding: 0;
+    overflow: hidden;
+    display:flex;
+    flex-direction: row;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+#index-nav .nav-link {
+    color: white !important;
+    font-family:'OpenSans';
     font-size: 16px;
+    font-weight: 400; /* Use regular version of Open Sans */
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.header-section {
+#index-nav.nav-link:hover {
+    text-decoration: underline;
+}
+
+#index-nav button {
+    color: rgb(3, 177, 244);
+    background-color: white;
+    border: none;
+    border-radius: 2em;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-family: 'OpenSans';
+    cursor: pointer;
+}
+
+#index-header .logo {
+    height: 80px;
+    width: auto;
+    margin-left: 16px;
+}
+
+.header-image{
     position: relative;
-    text-align: center;
-    color: white;
 }
 
-.header-section img {
-    width: 100%;
-    height: auto;
+.header-image img{
+    width:100%;
+    height:auto;
 }
 
 .header-text {
@@ -53,127 +102,628 @@ nav ul li a {
 }
 
 .header-text h1 {
-    font-size: 36px;
-    margin: 0 0 20px;
+    font-size: 3em;
+    font-weight: 700;
+    font-family: 'Bodoni Moda';
+    color: white;
+    margin-bottom: 20px;
 }
 
 .header-text button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #005bab;
-    color: white;
+    font-family: 'OpenSans';
+    font-weight: 700;
+    padding: 20px 20px;
+    font-size: 1em;
+    color: rgb(3, 177, 244);
+    background-color: white;
     border: none;
+    border-radius: 2em;
     cursor: pointer;
+    margin: 0 10px;
+    
 }
-
-.register-section {
-    background-color: #ff6600;
+/* ---------------------------------Section styles------------------------------- */
+#register-section,
+#hiring-section {
+    margin: 20px 0;
     text-align: center;
-    padding: 20px;
-    color: white;
-    font-size: 24px;
+    align-items: center;
+    display:flex;
+    justify-content: center; /* Added for centering */
 }
 
-.hiring-section {
-    text-align: center;
-    padding: 20px;
+.section h2 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Bodoni Moda'; /* Example of using Bodoni Moda */
 }
 
-.main-section {
-    display: flex;
-    padding: 40px 20px;
-    background-color: #f0f0f0;
+.section h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Bodoni Moda'; /* Example of using Bodoni Moda */
 }
 
-.teaching-content {
-    flex: 1;
-    padding: 20px;
-}
 
-.teaching-content h2 {
-    font-size: 28px;
-}
-
-.teaching-content p {
+.section p {
+    font-family: 'OpenSans';
     font-size: 16px;
-    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 400; /* Use regular version of Open Sans */
 }
 
-.teaching-content ul {
-    list-style-type: none;
+.section ul {
+    list-style: none;
     padding: 0;
 }
 
-.teaching-content ul li {
+.section ul li {
+    font-size: 16px;
+    font-family: 'OpenSans';
     margin: 10px 0;
+    font-weight: 300; /* Use regular version of Open Sans */
+    list-style-type: disc;
+    margin-left:20px;
+    text-decoration: underline;
 }
 
-.teaching-content button {
-    background-color: #005bab;
+.section button {
+    padding: 20px 20px;
+    font-size: 16px;
     color: white;
+    background-color: rgb(3, 177, 244);
     border: none;
-    padding: 10px 20px;
+    border-radius: 2em;
     cursor: pointer;
+    font-weight: 700; /* Use semi-bold version of Open Sans */
 }
 
-.main-section img {
-    flex: 1;
-    width: 100%;
+.teaching-section {
+    position: relative;
+    z-index: 2; /* Ensures it is above the location section */
+    overflow-x: hidden;
+}
+
+.teaching-section h2{
+    font-size: 32px;
+    font-family: 'Bodoni Moda'
+}
+
+.teaching-bg {
+    width: 130%;
     height: auto;
 }
 
+#teaching-content {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right:5%;
+    padding: 20px;
+    width: 50%;
+    text-align: left;
+    color: rgb(117, 117, 118);
+}
+
 .location-section {
+    position: relative;
+    padding: 0;
+    clear: both; /* Ensure the location section is always below the teaching section */
+    z-index: 1; /* Ensure it is below teaching section */
+    height:800px;
+    background-image: url('Images/home-our-locations-bg.jpeg');
+    background-size: cover;
+    width:100%;
+    overflow-x: hidden;
+}
+
+.location-bg-wrapper {
+    position: relative;
+    width: 100%;
+    height:inherit;
+}
+
+/*.location-bg {
+    display:block;
+}*/
+
+.location-map {
+    position: absolute;
+    top: 0;
+    right: -5%; /* Move the map to the right */
+    height: 100%;
+}
+
+.location-content {
+    position: absolute;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #fff;
-}
-
-.location-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.location-section button {
-    background-color: #005bab;
-    color: white;
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    
+    top: 10%;
+    left: 5%;
+    color: #f7f7f7;
+    padding: 40px;
+    width: 50%; /* Ensure the content is on the left side */
+    max-height: 100%; /* Ensures the content does not overflow the background */
 }
 
 .awards-section {
+    padding: 50px;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #f0f0f0;
+    color: rgb(117, 117, 118);
 }
 
-.awards-section h2 {
-    font-size: 28px;
+.awards-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 20px; /* Set a default margin for the container */
+}
+
+.award-item {
+    margin: 0 auto;
+}
+
+.award-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* Footer */
+#index-footer {
+    background-color: var(--color-light-gray);
+    color: var(--color-dark-gray);
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.footer-sponsors {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
-.awards-logos img {
-    margin: 10px;
-    height: 100px;
+.footer-sponsors img {
+    max-width: 100px;
+    height: auto;
 }
 
-.footer-content {
-    background-color: #005bab;
-    color: white;
-    padding: 20px;
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-contact div {
+    flex: 1 1 calc(20% - 20px);
     text-align: center;
 }
 
-.footer-content ul {
-    list-style-type: none;
-    padding: 0;
+.footer-contact p {
+    margin: 0;
 }
 
-.footer-content ul li {
-    margin: 5px 0;
+.footer-contact a {
+    margin-left: 5px;
+    color: var(--color-light-blue);
+    text-decoration: none;
 }
 
-.footer-locations p {
-    margin: 5px 0;
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media a {
+    color: var(--color-dark-gray);
+    font-size: 24px;
+}
+
+/* ---------------------Media Queries--------------------------- */
+.navbar-toggler{
+    display:none;
+}
+.nav-group{
+    display:flex;
+    justify-content: space-between;
+}
+@media (max-width: 1199px) {
+    .navbar-toggler {
+        display:block;
+    }
+    .nav-group{
+        width:100%;
+    }
+    .nav-item-bt{
+        width:100%;
+    }
+    .register-btn{
+        width:100%;
+    }
+    
+    #index-header{
+        flex-direction: column;
+        align-items: start;
+        background-color:rgb(26,46,56) ;
+    }
+
+    #index-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        width:100%;
+    }
+
+    #index-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #index-nav ul.show {
+        display: flex;
+    }
+
+    #index-nav li {
+        margin: 10px 0;
+    }
+
+    #index-nav a {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    #index-header button{
+        visibility: visible;
+    }
+
+    .header-text h1 {
+        font-size: 2em;
+        font-family: "Bodoni Moda";
+    }
+
+    .header-text button {
+        display: inline-block;
+        margin: 0 10px; /* Keep buttons horizontal with 10px margin */
+    }
+
+    #register-section img,
+    #hiring-section img {
+    max-width: 100%; /* Ensure images adjust to screen size */
+    height: auto;
+    }
+
+    .teaching-section img{
+        display: none; /* Hide the teaching image */
+    }
+
+    #teaching-content {
+        position:relative;
+        padding-right: 10%;
+        width: 100%; /* Make the content take full width */
+        text-align: left; 
+    }
+
+    #teaching-content button {
+        display: block;
+        margin: 20px auto; /* Center the button */
+    }
+
+    .location-section .location-map {
+        display: none; /* Hide the location map */
+    }
+
+    .location-bg:after {
+        content: "";
+        display: block;
+        min-height: 1%; /* Ensure background is at least 10% taller than content */
+        /*height: calc(100% + 10px); /* Add padding value (10px top + 10px bottom) */
+      }
+
+    .location-content {
+        position:absolute;
+        width: 100%;
+        text-align: center; /* Center the text */
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .location-content h2{
+        font-size:2em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }
+    
+    .awards-section h2{
+        font-size: 1.5em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }
+
+    .footer-sponsors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-sponsors img {
+        max-width: 80px;
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .location-group {
+        flex: 1 1 100%;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact div {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #index-header, #index-footer {
+        text-align: center;
+    }
+
+    #index-nav {
+        text-align: center;
+    }
+
+    #index-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #index-header button{
+        visibility: visible;
+    }
+
+    .header-text h1 {
+        font-size: 1.5em;
+        font-family: "Bodoni Moda";
+    }
+
+    .header-text button {
+        display: block;
+        margin: 10px auto 0; /* Center buttons vertically with no margin between them */
+    }
+
+    #register-section img,
+    #hiring-section img {
+    max-width: 100%; /* Ensure images adjust to screen size */
+    height: auto;
+    }
+
+    /*.location-content {
+        position: absolute;
+        text-align: center;
+        top: 0%;
+        transform: translateX(-50%);
+        width: 100%;
+    }*/
+
+    /*.location-content h2{
+        font-size:1.5em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }
+
+    .location-content h3{
+        font-size:1.7em;
+        font-family: "Bodoni Moda";
+        font-weight: 700;
+    }*/
+
+
+    .awards-logos{
+        grid-template-columns: 1fr;
+        margin:0 10px;
+    }
+
+    .footer-sponsors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-sponsors img {
+        max-width: 80px;
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .location-group {
+        flex: 1 1 100%;
+    }
+
+    .contact-option img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact div {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/*page7-signin page*/
+/* Basic styling */
+.page7 {
+    font-family: 'OpenSans';
+    background-color: #f1f1f1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.signin-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.signin-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 500px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.signin-header .logo {
+    width: 250px;
+}
+
+.signin-form {
+    position: center;
+}
+
+.signin-form .mascot {
+    position: absolute;
+    left: -70px;
+    top: -30px;
+    width: 140px;
+}
+
+.signin-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color:#444444
+}
+
+.signin-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color:rgb(240,0,86);
+}
+
+.signin-form input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right:20px;
+    border: 1px solid #cfcfcf;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    display: none;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.forgot-password {
+    font-family: 'OpenSans';
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #00cec8;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+}
+
+/*.signin-buttons {
+    display: flex;
+    justify-content: space-around;
+}*/
+
+.signin-button, .signup-button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 3em;
+    font-size: 1em;
+    cursor: pointer;
+    width:45%;
+}
+
+.signin-button {
+    background-color: #00cec8;
+    color: white;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.signin-button.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.signup-button {
+    background-color: white;
+    color:#00cec8;
+    border: 2px solid #00cec8;
+}
+
+.signin-button:hover, .signup-button:hover {
+    opacity: 0.9;
 }

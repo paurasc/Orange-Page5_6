@@ -4,48 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splashes Swim School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Henny+Penny&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .social-icons .btn {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+        }
+        .linkedin { background-color: #0077B5; color: #fff; }
+        .instagram { background-color: #444444; color: #fff; }
+        .twitter { background-color: #1DA1F2; color: #fff; }
+        .yelp { background-color: #D32323; color: #fff; }
+        .facebook { background-color: #3B5998; color: #fff; }
+        .youtube { background-color: #FF0000; color: #fff; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
+    <div id="index-header" class="sticky-top">
+        <div class="nav-group">
             <img src="Graphics/logo-small.png" alt="Splashes Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Swimming Lessons</a></li>
-                    <li><a href="#">Swim Programs</a></li>
-                    <li><a href="#">Adult Programs</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Register / Sign In</a></li>
-                </ul>
-            </nav>
+            <button onclick="myFunction()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#index-nav" aria-controls="index-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
         </div>
+                <nav id="index-nav" > <!--去除了class="collapse navbar-collapse"做个实验-->
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="Page1.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Page2.html">Swimming Lessons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="page3.html">Swim Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="page4.html">Adult Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="page5.html">Locations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="page6.html">Contact Us</a></li>
+                        <!--<div class="d-flex justify-content-end">
+                           </div>-->
+                        <li class="nav-item-bt"><a href=page7.html><button class="btn btn-primary register-btn">Register / Sign In</button></a></li>
+                    </ul>
+                </nav>
+                
+    </div>
+    <header id="header-background">
         <div class="header-image">
             <img src="Images/home.jpeg" alt="Child Swimming">
             <div class="header-text">
                 <h1>Learning it the Right Way, Right from the Beginning</h1>
                 <button id="info-video">Informational Video</button>
-                <button id="swim-video">Swimmerage Video</button>
+                <button id="swim-video">Swimvenage Video</button>
             </div>
         </div>
     </header>
 
-    <section id="register-section">
-        <h2>Register Online Here</h2>
+    <section id="register-section" class="text-center my-2">
+        <img src="Images/register-online-here-banner.png" alt="register-online-pic" class="register-bg">
     </section>
 
-    <section id="hiring-section">
+    <section id="hiring-section" class="text-center my-2">
         <img src="Images/ww-site-hiring-banner-resized.png" alt="Now Hiring">
     </section>
 
-    <section class="main-section">
+    <section class="teaching-section section">
+        <img src="Images/home-hands-on-teaching.jpeg" alt="Teaching Image" class="teaching-bg">
         <div id="teaching-content">
             <h2>Hands On Teaching</h2>
             <p>Splashes Aquatics Swim School provides high quality swim instruction and the ideal environment for learning how to swim. Our swim instructors use specialized “muscle memory” teaching techniques that help our students progress at a quick rate. Grouped by age and ability, our students benefit from swim classes that offer personalized attention. It’s never too late to learn to swim!</p>
-            <br><p>Splashes Aquatics Offers:</p>
+            <br><p><strong>Splashes Offers:</strong></p>
             <ul>
                 <li>Private Swimming Lessons - All Locations</li>
                 <li>Group Swimming Lessons - All Locations</li>
@@ -53,73 +82,124 @@
             </ul>
             <p>Select locations also offer additional swim programs such as swim competitions, swim teams, water aerobics, aquatic therapy, swim camps and more! To learn more about the Splashes Family Swim School near you, select a location below.</p>
             <br><p>Ready to sign up?</p>
-            <button>Register Now</button>
+            <button>REGISTER NOW</button>
         </div>
-        <img src="Images/home-hands-on-teaching.jpeg" alt="Teaching Image">
     </section>
 
-    <section class="location-section">
-        <h2>Find a Splashes Swim School near you</h2>
-        <p id="family-swim-location">Family Swim School locations</p>
-        <p id="location-context">Splashes Aquatics offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.</p>
-        <button>Find a Location Near You</button>
+    <section class="location-section section">
+        <div class="location-bg-wrapper">
+            <!--<img src="Images/home-our-locations-bg.jpeg" alt="Our location bg" class="location-bg">-->
+            <img src="Images/home-our-locations-map.png" alt="Our location map" class="location-map">
+            <div class="location-content">
+                <h2>Find a Splashes Swim School near you</h2>
+                <h3 id="family-swim-location">Family Swim School locations</h3>
+                <p id="location-context">Splashes Aquatics offers the finest professional swimming lessons from 21 swim schools and aquatic centers in California and Denver.</p>
+                <button>Find a Location Near You</button>
+            </div>
+        </div>
     </section>
 
-    <section class="awards-section">
-        <p>Awards We've Won</p>
+    <section class="awards-section section">
+        <h2>Awards We've Won</h2>
         <div class="awards-logos">
-            <img src="Images/awards/colorado-parenting-family-fav2021.png" alt="Award 1">
-            <img src="Images/awards/bay-area-parent-gold2020.png" alt="Award 2">
-            <img src="Images/awards/best-of-la-kids-winner.jpeg" alt="Award 3">
-            <img src="Images/awards/colorado-parenting-family-fav2020.png" alt="Award 4">
-            <img src="Images/awards/website-parenting-oc-2019.jpeg" alt="Award 5">
-            <img src="Images/awards/colorado-parenting-family-fav2019.jpeg" alt="Award 6">
-            <img src="Images/awards/bay-area-parent-2019.jpeg" alt="Award 7">
-            <img src="Images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="Award 8">
-            <img src="Images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Award 9">
-            <img src="Images/awards/best-of-the-best-2018.jpeg" alt="Award 10">
+            <div class="award-item"><img src="Images/awards/colorado-parenting-family-fav2021.png" alt="Award 1"></div>
+            <div class="award-item"><img src="Images/awards/bay-area-parent-gold2020.png" alt="Award 2"></div>
+            <div class="award-item"><img src="Images/awards/best-of-la-kids-winner.jpeg" alt="Award 3"></div>
+            <div class="award-item"><img src="Images/awards/colorado-parenting-family-fav2020.png" alt="Award 4"></div>
+            <div class="award-item"><img src="Images/awards/website-parenting-oc-2019.jpeg" alt="Award 5"></div>
+            <div class="award-item"><img src="Images/awards/colorado-parenting-family-fav2019.jpeg" alt="Award 6"></div>
+            <div class="award-item"><img src="Images/awards/bay-area-parent-2019.jpeg" alt="Award 7"></div>
+            <div class="award-item"><img src="Images/awards/mla-swim-lessons-winner-2020-250x250.png" alt="Award 8"></div>
+            <div class="award-item"><img src="Images/awards/gold-daisy-award-finalist-2018.jpeg" alt="Award 9"></div>
+            <div class="award-item"><img src="Images/awards/best-of-the-best-2018.jpeg" alt="Award 10"></div>
         </div>
     </section>
 
-    <footer>
-        <div id="footer-linkage">
-            <div class="footer-logo">
-                <img src="Images/wave-small.png" alt="footer logo1">
+    <footer id="index-footer" class="bg-light text-dark py-4" style="background-image: url('images/footer-bg.jpeg');">
+        <!--<div class="container">-->
+            <div class="text-center mb-3">
+                <img src="images/wave-small.png" alt="Splashes Logo" class="img-fluid">
             </div>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Register / Sign In</a></li>
-                <li><a href="#">Careers</a></li>
-            </ul>
-            <div class="social">
-                <a href="#" class="fa fa-Linkedin"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-yalp"></a>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-youtube"></a>
+            <div class="d-flex justify-content-between align-items-center mb-3 footer-nav">
+                <div class="footer-links">
+                    <a href="#" class="text-dark">About</a>
+                    <a href="#" class="text-dark">Locations</a>
+                    <a href="#" class="text-dark">FAQs</a>
+                    <a href="#" class="text-dark">Contact</a>
+                    <a href="#" class="text-dark">Register / Sign In</a>
+                    <a href="#" class="text-dark">Careers</a>
+                </div>
+                <div class="social-icons d-flex">
+                    <a href="#" class="btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="btn instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn yelp"><i class="fab fa-yelp"></i></a>
+                    <a href="#" class="btn facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn youtube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-        </div>
-        <div id="footer-locations">
-                <p>Orange County: (949) 837-7665</p>
-                <p>San Diego County: (951) 309-3466</p>
-                <p>Los Angeles County: (626) 839-3100</p>
-                <p>Northern California: (408) 279-1700</p>
-                <p>Denver: (720) 344-7700</p>
-        </div>
-        <div id="sponsors">
-            <li class="sponsor"><img src="Images/sponsors/footer-member-issa-logo.png" alt="member issa"></li>
-                <li class="sponsor"><img src="Images/sponsors/footer-ndpa-logo.png" alt="ndpa"></li>
-                <li class="sponsor"><img src="Images/sponsors/footer-stop-drowning-now-logo.png" alt="stop drowning"></li>
-                <li class="sponsor"><img src="Images/sponsors/footer-usssa-logo-2.png" alt="usssa"></li>
-        </div>
-        <div id="copyright">
-            <p> &copy 2022 Splashes</p>
-            <br><p>All Rights Reserved</p>
-        </div>
+            <hr>
+            <div class="d-flex justify-content-between mb-3 footer-contact">
+                <div>
+                    <p class="mb-0 font-weight-bold">Orange County:</p>
+                    <p><a href="tel:949-450-0777">(949) 450-0777</a></p>
+                </div>
+                <div>
+                    <p class="mb-0 font-weight-bold">San Diego County:</p>
+                    <p><a href="tel:760-603-9400">(760) 603-9400</a></p>
+                </div>
+                <div>
+                    <p class="mb-0 font-weight-bold">Los Angeles County:</p>
+                    <p><a href="tel:626-836-1200">(626) 836-1200</a></p>
+                </div>
+                <div>
+                    <p class="mb-0 font-weight-bold">Northern California:</p>
+                    <p><a href="tel:408-279-1700">(408) 279-1700</a></p>
+                </div>
+                <div>
+                    <p class="mb-0 font-weight-bold">Denver:</p>
+                    <p><a href="tel:720-344-7700">(720) 344-7700</a></p>
+                </div>
+            <!--</div>-->
+            <hr>
+            <div class="d-flex justify-content-between footer-sponsors">
+                <div class="sponsor-logos">
+                    <img src="images/sponsors/footer-usssa-logo-2.png" alt="USSSA Logo" class="img-fluid">
+                    <img src="images/sponsors/footer-ndpa-logo.png" alt="NDPA Logo" class="img-fluid mr-3">
+                    <img src="images/sponsors/footer-member-issa-logo.png" alt="ISSA Logo" class="img-fluid mr-3">
+                    <img src="images/sponsors/footer-stop-drowning-now-logo.png" alt="Stop Drowning Now Logo" class="img-fluid mr-3">
+                </div>
+                <div class="text-right">
+                    <p class="mb-0">&copy; 2022 Splashes.<br> All Rights Reserved</p>
+                </div>
+            </div>
+
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("index-nav");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+
+        function onResize() {
+    var x = document.getElementById("index-nav");
+    if (window.innerWidth > 1200) {
+      x.style.display = "flex";
+    } else {
+      x.style.display = "none";
+    }
+  };
+  window.addEventListener("resize", onResize);
+        </script>
+        
 </body>
 </html>
